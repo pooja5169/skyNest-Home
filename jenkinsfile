@@ -6,7 +6,7 @@ pipeline {
 
         stage('Checkout') {
             steps {
-                git 'https://github.com/techpooja5169/skyNest-Home
+                git https://github.com/pooja5169/skyNest-Home.git
             }
         }
 
