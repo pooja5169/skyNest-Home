@@ -1,0 +1,29 @@
+pipeline {
+
+    agent any
+
+    stages {
+
+        stage('Checkout') {
+            steps {
+                git 'https://github.com/techpooja5169/skyNest-Home
+            }
+        }
+
+        stage('Verify') {
+            steps {
+                sh 'ls -l'
+            }
+        }
+
+        stage('Deploy') {
+            steps {
+                sh '''
+                scp -r * root@192.168.237.160:/website/
+                '''
+            }
+        }
+
+    }
+
+}
