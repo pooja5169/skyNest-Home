@@ -4,12 +4,6 @@ pipeline {
 
     stages {
 
-        stage('Checkout') {
-            steps {
-                git 'https://github.com/pooja5169/skyNest-Home.git'
-            }
-        }
-
         stage('Verify') {
             steps {
                 sh 'ls -l'
