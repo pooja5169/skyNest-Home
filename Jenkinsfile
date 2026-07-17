@@ -13,7 +13,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 sh '''
-                scp -r * root@3.110.207.153:/website/
+                scp -r * root@192.168.237.160:/website/
                 '''
             }
         }
